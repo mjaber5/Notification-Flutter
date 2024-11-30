@@ -1,3 +1,4 @@
+import 'package:fcm_flutter/core/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -5,12 +6,15 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        Center(
-          child: Text('Hello World'),
-        )
-      ],
+    return SafeArea(
+      child: Column(
+        children: [
+          buildAppBar(
+            title: 'Home',
+          ),
+          const Center(child: Text('Hello World')),
+        ],
+      ),
     );
   }
 }
